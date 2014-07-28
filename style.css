@@ -1,8 +1,16 @@
 * {
 	margin: 6%;
-	font-size: 200%;
-	font-weight: bold;
+	font-size: 160%;
 	text-align: center;
 }
+
+.main { font-weight: bold; }
+
+.sub {
+	position: absolute;
+	bottom: 1px;
+	font-size: 35%;
+	font-style: italic;
+ }
 
 #bit { color: red; }

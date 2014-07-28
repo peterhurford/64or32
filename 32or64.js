@@ -28,6 +28,8 @@
     return "<Error>";
   };
 
-  document.write("Your computer is <div id='bit'>" + (ThirtyTwoorSixtyFour()) + "</div> bit.");
+  document.write("<div class='main'>Your computer is <div id='bit'>" + (ThirtyTwoorSixtyFour()) + "</div> bit.</div>");
+
+  document.write("<div class='sub'>Platform: " + window.navigator.platform + ", cpuClass: " + window.navigator.cpuClass + "</div>");
 
 }).call(this);
