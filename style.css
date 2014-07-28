@@ -1,6 +1,6 @@
 * {
-	margin: 6%;
-	font-size: 160%;
+	margin: 3%;
+	font-size: 145%;
 	text-align: center;
 }
 
@@ -8,8 +8,8 @@
 
 .sub {
 	position: absolute;
-	bottom: 1px;
-	font-size: 35%;
+	bottom: 2px;
+	font-size: 30%;
 	font-style: italic;
  }
 
