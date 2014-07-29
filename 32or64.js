@@ -7,7 +7,7 @@
     if (w === 'MacIntel') {
       b = 64;
     } else if (w === 'Win32') {
-      b = 32;
+      b = -1;
     } else if (w === 'Win64' && c === 'x64') {
       b = 64;
     } else if (w === 'Win32' && c === 'x86') {

@@ -4,7 +4,7 @@ window.onload = ->
 	if w == 'MacIntel'  					# 64 bit MacOS + (64 bit Safari or 32 bit Chrome)
 		b = 64
 	else if w == 'Win32'					# 32 bit windows + safari
-	 	b = 32
+	 	b = -1
 	else if w == 'Win64' and c == 'x64' 	# 64 bit Windows + 64 bit IE
 		b = 64
 	else if w == 'Win32' and c == 'x86'		# 64 bit Windows + 32 bit IE
