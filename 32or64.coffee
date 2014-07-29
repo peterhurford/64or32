@@ -1,22 +1,23 @@
 window.onload = ->
 	w = window.navigator.platform
-	if w == 'MacIntel'  											# 64 bit MacOS + (64 bit Safari or 32 bit Chrome)
+	c = window.navigator.cpuClass
+	if w == 'MacIntel'  					# 64 bit MacOS + (64 bit Safari or 32 bit Chrome)
 		b = 64
-	else if w == 'Win32'											# 32 bit windows + safari
+	else if w == 'Win32'					# 32 bit windows + safari
 	 	b = 32
-	else if w == 'Win64' and window.navigator.cpuClass == 'x64' 	# 64 bit Windows + 64 bit IE
+	else if w == 'Win64' and c == 'x64' 	# 64 bit Windows + 64 bit IE
 		b = 64
-	else if w == 'Win32' and window.navigator.cpuClass == 'x86'		# 64 bit Windows + 32 bit IE
+	else if w == 'Win32' and c == 'x86'		# 64 bit Windows + 32 bit IE
 		b = 64
-	else if w == 'Win32'											# 64 bit Windows + 32 Firefox (or Chrome)
+	else if w == 'Win32'					# 64 bit Windows + 32 Firefox (or Chrome)
 		b = -1
-	else if w == 'Linux i686'										# 32 bit linux mint (i686) + Firefox
+	else if w == 'Linux i686'				# 32 bit linux mint (i686) + Firefox
 		b = -1
-	else if w == 'Linux i686'										# 64 bit Ubuntu (x86_64) + 32 bit Chrome
+	else if w == 'Linux i686'				# 64 bit Ubuntu (x86_64) + 32 bit Chrome
 		b = -1
-	else if w == 'Linux x86_64'									# 64 bit Ubuntu + 64 bit Epiphany
+	else if w == 'Linux x86_64'				# 64 bit Ubuntu + 64 bit Epiphany
 		b = 64
-	else if  w == 'Linux armv7l' || w == 'iPad' || w == 'iPhone'   # Phones and tablets
+	else if w == 'Linux armv7l' || w == 'iPad' || w == 'iPhone'   # Phones and tablets
 		b = 0
 
 	if b != -1
@@ -27,4 +28,4 @@ window.onload = ->
 		r = "You're on a phone or a tablet."
 
 	document.getElementById('page').innerHTML = "<div class='main'>#{r}</div>
-		<div class='sub'>Platform: #{window.navigator.platform}, cpuClass: #{window.navigator.cpuClass}</div>"
+		<div class='sub'>Platform: #{w}, cpuClass: #{c}</div>"
