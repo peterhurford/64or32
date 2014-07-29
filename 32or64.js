@@ -9,7 +9,7 @@
     if (w === 'Win32') {
       b = 32;
     }
-    if (w === 'Win64' && w === 'x64') {
+    if (w === 'Win64' && window.navigator.cpuClass === 'x64') {
       b = 64;
     }
     if (w === 'Win32' && window.navigator.cpuClass === 'x86') {

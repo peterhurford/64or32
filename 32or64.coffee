@@ -2,7 +2,7 @@ window.onload = ->
 	w = window.navigator.platform
 	b = 64 if w == 'MacIntel'  										# 64 bit MacOS + (64 bit Safari or 32 bit Chrome)
 	b = 32 if w == 'Win32'											# 32 bit windows + safari
-	b = 64 if w == 'Win64' and w == 'x64' 							# 64 bit Windows + 64 bit IE
+	b = 64 if w == 'Win64' and window.navigator.cpuClass == 'x64' 	# 64 bit Windows + 64 bit IE
 	b = 64 if w == 'Win32' and window.navigator.cpuClass == 'x86'	# 64 bit Windows + 32 bit IE
 	b = 64 if w == 'Win32'											# 64 bit Windows + 32 Firefox (or Chrome)
 	b = 32 if w == 'Linux i686'										# 32 bit linux mint (i686) + Firefox
