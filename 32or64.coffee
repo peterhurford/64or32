@@ -20,12 +20,12 @@ window.onload = ->
 	else if w == 'Linux armv7l' || w == 'iPad' || w == 'iPhone'   # Phones and tablets
 		b = 0
 
-	if b != -1
+	if b == -1
 		r = "We're having some trouble.  Sorry. :("
-	else if b != 0
-		r = "Your processor is <div id='bit'>#{b}</div> bit."
-	else
+	else if b == 0
 		r = "You're on a phone or a tablet."
+	else
+		r = "Your processor is <div id='bit'>#{b}</div> bit."
 
 	document.getElementById('page').innerHTML = "<div class='main'>#{r}</div>
 		<div class='sub'>Platform: #{w}, cpuClass: #{c}</div>"
