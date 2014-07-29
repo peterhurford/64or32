@@ -17,15 +17,15 @@ window.onload = ->
 		b = -1
 	else if w == 'Linux x86_64'				# 64 bit Ubuntu + 64 bit Epiphany
 		b = 64
-	else if w == 'Linux armv7l' || w == 'iPad' || w == 'iPhone'   # Phones and tablets
+	else if w == 'Linux armv7l' || w == 'iPad' || w == 'iPhone' || w == 'Android' || w == 'iPod' || w == 'BlackBerry'   # Phones and tablets
 		b = 0
 
-	if b == -1
-		r = "We're having some trouble.  Sorry. :("
-	else if b == 0
+	if b == 0
 		r = "You're on a phone or a tablet."
-	else
+	else if b == 32 || b == 64
 		r = "Your processor is <div id='bit'>#{b}</div> bit."
+	else
+		r = "We're having some trouble.  Sorry. :("
 
 	document.getElementById('page').innerHTML = "<div class='main'>#{r}</div>
 		<div class='sub'>Platform: #{w}, cpuClass: #{c}</div>"
