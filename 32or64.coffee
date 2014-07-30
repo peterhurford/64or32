@@ -1,31 +1,23 @@
+fi: (s) -> window.navigator.userAgent.indexOf(s) > -1
+
 window.onload = ->
 	w = window.navigator.platform
-	c = window.navigator.cpuClass
-	if w == 'MacIntel'  					# 64 bit MacOS + (64 bit Safari or 32 bit Chrome)
-		b = 64
-	else if w == 'Win32'					# 32 bit windows + safari
-	 	b = -1
-	else if w == 'Win64' and c == 'x64' 	# 64 bit Windows + 64 bit IE
-		b = 64
-	else if w == 'Win32' and c == 'x86'		# 64 bit Windows + 32 bit IE
-		b = 64
-	else if w == 'Win32'					# 64 bit Windows + 32 Firefox (or Chrome)
-		b = -1
-	else if w == 'Linux i686'				# 32 bit linux mint (i686) + Firefox
-		b = -1
-	else if w == 'Linux i686'				# 64 bit Ubuntu (x86_64) + 32 bit Chrome
-		b = -1
-	else if w == 'Linux x86_64'				# 64 bit Ubuntu + 64 bit Epiphany
+
+	# Check
+	if fi('x86_64') || fi('x86-64') || fi('Win64') || fi('x64;') || fi('amd64') || fi('AMD64') || fi('WOW64') || fi('x64_64') || w == 'MacIntel' || w == 'Linux x86_64'
 		b = 64
 	else if w == 'Linux armv7l' || w == 'iPad' || w == 'iPhone' || w == 'Android' || w == 'iPod' || w == 'BlackBerry'   # Phones and tablets
 		b = 0
+	else if w == 'Linux i686'
+		b = -1
 
-	if b == 0
+	if b == -1
+		r = "We're having trouble with Linux.  <a href='http://www.linuxforums.org/forum/newbie/104386-what-version-32-64bit-linux-installed-my-machine.html'>Try here for advice.</a>"
+	else if b == 0
 		r = "You're on a phone or a tablet."
-	else if b == 32 || b == 64
-		r = "Your processor is <div id='bit'>#{b}</div> bit."
+	else if b == 64
+		r = "Your processor is <div id='bit'>64</div> bit."
 	else
-		r = "We're having some trouble.  Sorry. :("
+		r = "Your processor is <div id='bit'>32</div> bit.<br>...Probably.  It can be hard to tell."
 
-	document.getElementById('page').innerHTML = "<div class='main'>#{r}</div>
-		<div class='sub'>Platform: #{w}, cpuClass: #{c}</div>"
+	document.getElementById('page').innerHTML = "<div class='main'>#{r}</div>"
