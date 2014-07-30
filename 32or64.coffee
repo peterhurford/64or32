@@ -1,6 +1,6 @@
 window.onload = ->
 	w = window.navigator.platform
-	fi (s): -> window.navigator.userAgent.indexOf(s) > -1
+	fi = (s) -> window.navigator.userAgent.indexOf(s) > -1
 
 	# Check
 	if fi('x86_64') || fi('x86-64') || fi('Win64') || fi('x64;') || fi('amd64') || fi('AMD64') || fi('WOW64') || fi('x64_64') || w == 'MacIntel' || w == 'Linux x86_64'
