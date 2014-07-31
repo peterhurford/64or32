@@ -1,10 +1,19 @@
-* {
-	margin: 3%;
-	font-size: 145%;
+#intro {
+	margin: 2% 8%;
+	font-size: 170%;
+}
+
+#page {
+	margin: 2%;
+	font-size: 500%;
+	line-height: 130px;
 	text-align: center;
 }
 
-.main { font-weight: bold; }
+.main {
+	padding: 10px;
+	font-weight: bold;
+}
 
 .sub {
 	position: absolute;
@@ -13,4 +22,13 @@
 	font-style: italic;
  }
 
-#bit { color: red; }
+#bit {
+	color: red;
+	font-size: 200%;
+}
+
+#trail {
+	margin: 3%;
+	font-size: 140%;
+	text-align: center;
+}
