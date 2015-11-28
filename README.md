@@ -6,9 +6,9 @@ A website to determine if your computer is 32-bit or 64-bit
 
 The libraries provided in the repo come pre-minified for your ease of use.
 
-If you are already **using** jQuery on your project you can use the slightly smaller `32or64-jquery.min.js`.
+If you are **using jQuery** on your project you can use the *slightly smaller* `32or64-jquery.min.js`.
 
-If you are **not using** jQuery on your project, you can use the slightly more performant `32or64-no-jquery.min.js`.
+If you are **not using jQuery** on your project, you can use the *lightly more performant* `32or64-no-jquery.min.js`.
 
 * * *
 
