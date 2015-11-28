@@ -10,48 +10,37 @@ $(document).ready(function(){
     };
 
     //set a variable for the browser's reported architecture
-    var windowUA = window.navigator.platform;
-    //define a var to be used later
-    var detected = '';
-    //if the User Agent has any of the following strings it's 64-Bit
-    if (
-            scanUA('x86_64') ||
-            scanUA('x86-64') ||
-            scanUA('Win64') ||
-            scanUA('x64;') ||
-            scanUA('amd64') ||
-            scanUA('AMD64') ||
-            scanUA('WOW64') ||
-            scanUA('x64_64') ||
-            windowUA === 'MacIntel' ||
-            windowUA === 'Linux x86_64'
-        ) {
-            detected = 64;
-    //Otherwise if it's got any of these it's a mobile device
-    } else if (
-            windowUA === 'Linux armv7l' ||
-            windowUA === 'iPad' ||
-            windowUA === 'iPhone' ||
-            windowUA === 'Android' ||
-            windowUA === 'iPod' ||
-            windowUA === 'BlackBerry'
-        ) {
-            detected = 0;
-    //This one doesn't report accurately, set it to unknown
-    } else if (
-            windowUA === 'Linux i686'
-        ) {
-            detected = -1;
-    }
-
+    var platform = window.navigator.platform;
     //Set the className variable based on what their User Agent reported
     var className = '';
-    if (detected === -1) {
-        className = 'unknown';
-    } else if (detected === 0) {
-        className = 'mobile';
-    } else if (detected === 64) {
+    //if the User Agent has any of the following strings it's 64-Bit
+    if (
+        scanUA('x86_64') ||
+        scanUA('x86-64') ||
+        scanUA('Win64') ||
+        scanUA('x64;') ||
+        scanUA('amd64') ||
+        scanUA('AMD64') ||
+        scanUA('WOW64') ||
+        scanUA('x64_64') ||
+        platform === 'MacIntel' ||
+        platform === 'Linux x86_64'
+    ) {
         className = 'arch64';
+    //Otherwise if it's got any of these it's a mobile device
+    } else if (
+        platform === 'Linux armv7l' ||
+        platform === 'iPad' ||
+        platform === 'iPhone' ||
+        platform === 'Android' ||
+        platform === 'iPod' ||
+        platform === 'BlackBerry'
+    ) {
+        className = 'mobile';
+    //This one doesn't report accurately, set it to unknown
+    } else if ( platform === 'Linux i686' ) {
+        className = 'unknown';
+    //Anything else will just be lumped into 32-bit
     } else {
         className = 'arch32';
     }
