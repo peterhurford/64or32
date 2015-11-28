@@ -1,4 +1,4 @@
-//64or32.com
+//64or32.com | MIT License
 
 //Wrap the whole thing in an IFFE for safety
 (function(){

@@ -1,4 +1,4 @@
-//64or32.com
+//64or32.com | MIT License
 
 //When the page has loaded, run the following code
 $(document).ready(function(){

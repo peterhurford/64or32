@@ -53,3 +53,9 @@ html.arch64 .arch64 {
 
 **Q:** If that CSS is needed for this to work, why isn't the library adding it in automatically?  
 **A:** Because if the user doesn't have JavaScript enabled, then the CSS will never load. It's safer to let developers choose what the CSS will do by default in case a user doesn't have JavaScript turned on.
+
+* * *
+
+#### License
+
+This library uses the MIT open source software license. It means you can use this for whatever you want, including commercial uses and making changes to it, you just need to leave the top line of the file `//64or32.com | MIT License` in place.
