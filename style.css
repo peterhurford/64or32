@@ -1,36 +1,58 @@
 #intro {
-	margin: 2% 8%;
-	font-size: 170%;
+    margin: 2% 8%;
+    font-size: 170%;
 }
 
 #page {
-	margin: 2%;
-	font-size: 500%;
-	line-height: 130px;
-	text-align: center;
+    margin: 2%;
+    font-size: 500%;
+    line-height: 130px;
+    text-align: center;
 }
 
 .main {
-	padding: 10px;
-	font-weight: bold;
+    padding: 10px;
+    font-weight: bold;
 }
 
 .sub {
-	position: absolute;
-	bottom: 2px;
-	font-size: 30%;
-	font-style: italic;
- }
-
-#bit {
-	color: red;
-	font-size: 200%;
+    position: absolute;
+    bottom: 2px;
+    font-size: 30%;
+    font-style: italic;
 }
 
-#ad { text-align: center; }
+#bit {
+    color: #F00;
+    font-size: 200%;
+}
+
+#ad {
+    text-align: center;
+}
 
 #trail {
-	margin: 3%;
-	font-size: 140%;
-	text-align: center;
+    margin: 3%;
+    font-size: 140%;
+    text-align: center;
+}
+
+/* Hide all Architecture specific HTML on page load */
+.unknown,
+.mobile,
+.arch64,
+.arch32 {
+    display: none;
+}
+
+/* Only display the content if the JS added a matching class to the HTML tag */
+html.unknown,
+html.mobile,
+html.arch64,
+html.arch32,
+html.unknown .unknown,
+html.mobile .mobile,
+html.arch64 .arch64,
+html.arch32 .arch32 {
+    display: block;
 }

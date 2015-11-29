@@ -1,40 +1,45 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	    <meta charset="utf-8">
-	    <meta name="description" content="Is my computer 32 bit or 64 bit?  Is my processor 32 bit or 64 bit?  Find out!">
+		<meta charset="utf-8">
+		<meta name="description" content="Is my computer 32 bit or 64 bit? Is my processor 32 bit or 64 bit? Find out!">
 		<title>64 bit or 32 bit?</title>
-		<link href="style.css" rel="stylesheet" type="text/css">
-		<script src='32or64.js'></script>
-		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-		  ga('create', 'UA-53302017-1', 'auto');
-		  ga('send', 'pageview');
-
-		</script>
+		<link href="style.min.css" rel="stylesheet" type="text/css">
 	</head>
-
 	<body>
-		<div id='intro'>Is your processor 32 or 64 bit?</div>
-		<div id='page'></div>
-		<noscript>Is your processor 32 or 64 bit?  Unfortunately, this page requires JavaScript to work. :(</noscript>
 
-		<div id='ad'>
-			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-				<!-- 64or32 Main Ad -->
-				<ins class="adsbygoogle"
-				     style="display:inline-block;width:728px;height:90px"
-				     data-ad-client="ca-pub-2002234670539849"
-				     data-ad-slot="4622093731"></ins>
-				<script>
-				(adsbygoogle = window.adsbygoogle || []).push({});
-			</script>
+		<div id="intro">Is your processor 32 or 64 bit?</div>
+
+		<div id="page">
+			<div class="main">
+				<div class="unknown">We're having trouble with Linux. <a href="http://www.linuxforums.org/forum/newbie/104386-what-version-32-64bit-linux-installed-my-machine.html">Try here for advice.</a></div>
+				<div class="mobile">You're on a phone or a tablet.</div>
+				<div class="arch64">Your processor is <div id="bit">64</div> bit.</div>
+				<div class="arch32">Your processor is <div id="bit">32</div> bit.<br />...Probably.  It can be hard to tell.</div>
+				<noscript>To detect your if your processor 32 or 64 bit, <strong>enable JavaScript</strong>.</noscript>
+			</div>
 		</div>
-		
+
+		<div id="ad">
+			<script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<!-- 64or32 Main Ad -->
+			<ins class="adsbygoogle"
+				style="display:inline-block;width:728px;height:90px"
+				data-ad-client="ca-pub-2002234670539849"
+				data-ad-slot="4622093731"></ins>
+			<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+		</div>
+
 		<div id='trail'><a href='http://www.computerhope.com/issues/ch001498.htm'>What is the difference between 32-bit and 64-bit?</a></div>
+		<script src="32or64-no-jquery.min.js"></script>
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-53302017-1', 'auto');
+			ga('send', 'pageview');
+		</script>
 	</body>
 </html>
