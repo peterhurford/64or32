@@ -1,14 +1,14 @@
 ##[64or32.com](http://64or32.com)
 
-A website to determine if your computer is 32-bit or 64-bit
+A website and library to determine if your computer is 64-bit or 32-bit
 
 * * *
 
 The libraries provided in the repo come pre-minified for your ease of use.
 
-If you are **using jQuery** on your project you can use the *slightly smaller* `32or64-jquery.min.js`.
+If you are **using jQuery** on your project you can use the *slightly smaller* `64or32-jquery.min.js`.
 
-If you are **not using jQuery** on your project, you can use the *lightly more performant* `32or64-no-jquery.min.js`.
+If you are **not using jQuery** on your project, you can use the *lightly more performant* `64or32-no-jquery.min.js`.
 
 * * *
 
@@ -17,7 +17,7 @@ If you are **not using jQuery** on your project, you can use the *lightly more p
 * **Pick** one of the minified `.js` files as noted above and **save** it to your project
 * **Link** to it at the bottom of your page with a script tag like so:
 ```javascript
-<script src="32or64-no-jquery.min.js"></script>
+<script src="64or32-no-jquery.min.js"></script>
 ```
 * **Add** one of these **classes** to any element on the page that you only want to be displayed if that architecture is detected:
  * unknown
