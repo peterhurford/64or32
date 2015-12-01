@@ -1,4 +1,4 @@
-##[64or32.com](http://www.64or32.com)
+##[64or32.com](http://64or32.com)
 
 A website to determine if your computer is 32-bit or 64-bit
 
