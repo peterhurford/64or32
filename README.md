@@ -19,11 +19,15 @@ If you are **not using jQuery** on your project, you can use the *lightly more p
 ```javascript
 <script src="64or32-no-jquery.min.js"></script>
 ```
+or
+```javascript
+<script src="64or32-jquery.min.js"></script>
+```
 * **Add** one of these **classes** to any element on the page that you only want to be displayed if that architecture is detected:
- * unknown
- * mobile
- * arch32
- * arch64
+ * `unknown`
+ * `mobile`
+ * `arch32`
+ * `arch64`
 * And finally, **add** this to your **CSS**
 ```css
 /* Hide all Architecture specific HTML on page load */
