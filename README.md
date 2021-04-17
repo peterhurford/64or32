@@ -1,4 +1,4 @@
-## [64or32.com](http://64or32.com)
+## [peterhurford.github.io/64or32](https://peterhurford.github.io/64or32)
 
 A website and library to determine if your computer is 64-bit or 32-bit
 
